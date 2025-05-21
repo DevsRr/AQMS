@@ -1,9 +1,10 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #ecf0f1;
-  color: #2c3e50;
+  background-color: #afecff;
+  color: #fff;
 }
+
 .navbar {
   background-color: #003163;
   color: #fff;
@@ -12,140 +13,97 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+
 .nav-title {
   font-size: 18px;
   font-weight: bold;
   text-align: center;
 }
-.nav-button {
-  background-color: #3498db;
-  color: white;
-  padding: 8px 16px;
-  text-decoration: none;
-  border-radius: 4px;
-  font-weight: bold;
-}
-.nav-button:hover {
-  background-color: #2980b9;
-}
-.dashboard {
-  max-width: 1000px;
-  margin: auto;
-  padding: 20px;
-}
-.header {
-  font-size: 24px;
-  font-weight: bold;
-  color: #2c3e50;
-  margin-bottom: 20px;
-  text-align: center;
-}
-.progress-bars {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  margin-bottom: 30px;
-}
-.progress-item {
-  text-align: center;
-  margin: 15px;
-  background: #1a1a1a;
-  padding: 15px;
-  border-radius: 10px;
-  width: 200px;
-  color: #fff;
-}
-.progress-wrapper {
-  position: relative;
-  width: 120px;
-  height: 120px;
-  margin: auto;
-}
-.progress-circle {
-  transform: rotate(-90deg);
-}
-.progress-circle circle:nth-child(2) {
-  stroke-dasharray: 314;
-  stroke-dashoffset: 314;
-  transition: stroke-dashoffset 0.8s ease, stroke 0.4s ease;
-}
-.progress-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 16px;
-  font-weight: bold;
-  color: #fff;
-}
-.chart-section {
-  margin-top: 30px;
-}
-.chart-title {
-  text-align: center;
-  color: #2c3e50;
-  margin-bottom: 10px;
-}
-.chart-container {
-  background: #1c1c1c;
-  border-radius: 10px;
-  padding: 20px;
-}
-canvas {
-  width: 100% !important;
-  height: 400px !important;
-}
-.progress-bars {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  margin-bottom: 30px;
-}
-.progress-item {
-  text-align: center;
-  margin: 15px;
-  background: #1a1a1a;
-  padding: 15px;
-  border-radius: 10px;
-  width: 200px;
-  color: #fff;
-}
-.progress-wrapper {
-  position: relative;
-  width: 120px;
-  height: 120px;
-  margin: auto;
-}
-.progress-circle {
-  transform: rotate(-90deg);
-}
-.progress-circle circle:nth-child(2) {
-  stroke-dasharray: 314;
-  stroke-dashoffset: 314;
-  transition: stroke-dashoffset 0.8s ease, stroke 0.4s ease;
-}
-.progress-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 16px;
-  font-weight: bold;
-  color: #fff;
-}
-.chart-scroll-wrapper {
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  background: #1c1c1c;
-}
 
-.chart-scroll-wrapper canvas {
-  min-width: 600px;
-}
 .nav-logo {
   height: 40px;
   width: auto;
   margin-left: auto;
 }
 
+.dashboard {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
 
+.header {
+  font-size: 24px;
+  font-weight: bold;
+  color: #002333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.progress-bars {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.progress-item {
+  text-align: center;
+  margin: 15px;
+  background: #1a1a1a;
+  padding: 15px;
+  border-radius: 10px;
+  width: 200px;
+  color: #fff;
+}
+
+.progress-wrapper {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: auto;
+}
+
+.progress-circle {
+  transform: rotate(-90deg);
+}
+
+.progress-circle circle:nth-child(2) {
+  stroke-dasharray: 314;
+  stroke-dashoffset: 314;
+  transition: stroke-dashoffset 0.8s ease, stroke 0.4s ease;
+}
+
+.progress-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.chart-section {
+  margin-top: 30px;
+}
+
+.chart-title {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.chart-scroll-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  background: #222;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.chart-scroll-wrapper canvas {
+  min-width: 600px;
+  height: 400px !important;
+  display: block;
+}
