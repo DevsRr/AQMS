@@ -2,77 +2,104 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AQMS Dashboard</title>
-  <link rel="stylesheet" href="style.css"/>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AQMS - Air Quality Monitoring System</title>
+  <style>
+    body {
+      background-color: #dffcff;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      margin-top: 100px;
+    }
+
+    .logo {
+      width: 400px;
+      height: auto;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin: 20px 0;
+      color: #222;
+    }
+
+    .open-btn {
+      display: inline-block;
+      padding: 12px 30px;
+      font-size: 18px;
+      background-color: #000;
+      color: #fff;
+      border: none;
+      border-radius: 25px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .open-btn:hover {
+      background-color: #333;
+    }
+
+    /* Loader Styles */
+    .loader-container {
+      display: none;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #dffcff;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 9999;
+    }
+
+    .loader {
+      border: 8px solid #f3f3f3;
+      border-top: 8px solid #0077cc;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
 </head>
 <body>
-  <div class="navbar">
-  <div class="nav-title">AQMS Dashboard</div>
-  <img src="asset/logo.png" alt="Logo" class="nav-logo">
-</div>
-
-
-  <div class="dashboard">
-    <div class="header">Monitoring System</div>
-
-    <div class="progress-bars">
-  <div class="progress-item">
-    <div class="progress-wrapper">
-      <svg class="progress-circle" width="120" height="120">
-        <circle cx="60" cy="60" r="50" stroke="#444" stroke-width="10" fill="none" />
-        <circle id="pm25Circle" cx="60" cy="60" r="50" stroke="#2ecc71" stroke-width="10" fill="none" />
-      </svg>
-      <div class="progress-text" id="pm25Text">0 µg/m³</div>
-    </div>
-    <p>PM 2.5</p>
-  </div>
-  <div class="progress-item">
-    <div class="progress-wrapper">
-      <svg class="progress-circle" width="120" height="120">
-        <circle cx="60" cy="60" r="50" stroke="#444" stroke-width="10" fill="none" />
-        <circle id="mq135Circle" cx="60" cy="60" r="50" stroke="#2ecc71" stroke-width="10" fill="none" />
-      </svg>
-      <div class="progress-text" id="mq135Text">0 ppm</div>
-    </div>
-    <p>MQ-135</p>
-  </div>
-</div>
-
-    <div class="progress-bars">
-      <div class="progress-item">
-        <div class="progress-wrapper">
-          <svg class="progress-circle" width="120" height="120">
-            <circle cx="60" cy="60" r="50" stroke="#333" stroke-width="10" fill="none"/>
-            <circle id="tempCircle" cx="60" cy="60" r="50" stroke="#2ecc71" stroke-width="10" fill="none"/>
-          </svg>
-          <div id="tempText" class="progress-text">--°C</div>
-        </div>
-        <div>Temperature</div>
-      </div>
-
-      <div class="progress-item">
-        <div class="progress-wrapper">
-          <svg class="progress-circle" width="120" height="120">
-            <circle cx="60" cy="60" r="50" stroke="#333" stroke-width="10" fill="none"/>
-            <circle id="humidityCircle" cx="60" cy="60" r="50" stroke="#2ecc71" stroke-width="10" fill="none"/>
-          </svg>
-          <div id="humidityText" class="progress-text">--%</div>
-        </div>
-        <div>Humidity</div>
-      </div>
-    </div>
-
-    <div class="chart-section">
-  <div class="chart-title">Air Quality Records</div>
-  <div class="chart-scroll-wrapper">
-    <canvas id="pmChart" width="1000"></canvas>
-  </div>
-</div>
-
+  <!-- Main Page -->
+  <div class="container" id="main-content">
+    <img src="asset/logo.png" alt="AQMS Logo" class="logo" />
+    <h1>Air Quality Monitoring System</h1>
+    <button class="open-btn" onclick="showLoader()">Open</button>
   </div>
 
-  <script src="script.js"></script>
+  <!-- Loader -->
+  <div class="loader-container" id="loader">
+    <div class="loader"></div>
+  </div>
+
+  <script>
+    function showLoader() {
+      // Hide main content
+      document.getElementById("main-content").style.display = "none";
+
+      // Show loader
+      document.getElementById("loader").style.display = "flex";
+
+      // Redirect after 5 seconds
+      setTimeout(() => {
+        window.location.href = "monitoring.html";
+      }, 5000);
+    }
+  </script>
 </body>
 </html>
