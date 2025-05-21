@@ -45,7 +45,6 @@
       background-color: #333;
     }
 
-    /* Loader Styles */
     .loader-container {
       display: none;
       justify-content: center;
@@ -75,27 +74,23 @@
   </style>
 </head>
 <body>
-  <!-- Main Page -->
+
   <div class="container" id="main-content">
     <img src="asset/logo.png" alt="AQMS Logo" class="logo" />
     <h1>Air Quality Monitoring System</h1>
     <button class="open-btn" onclick="showLoader()">Open</button>
   </div>
 
-  <!-- Loader -->
   <div class="loader-container" id="loader">
     <div class="loader"></div>
   </div>
 
   <script>
     function showLoader() {
-      // Hide main content
       document.getElementById("main-content").style.display = "none";
 
-      // Show loader
       document.getElementById("loader").style.display = "flex";
 
-      // Redirect after 5 seconds
       setTimeout(() => {
         window.location.href = "monitoring.html";
       }, 5000);
